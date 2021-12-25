@@ -1,0 +1,297 @@
+/* how calculate 1350 / 16 = 84.000000 rounded to 84 */
+
+
+/* --------------------------------- */
+
+
+/* 84*16 = 1344px (Smaller desktops) */
+
+
+/* --------------------------------- */
+
+@media (max-width: 84em) {
+    .container-hero {
+        max-width: 120rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* --------------------------------- */
+
+
+/* 75*16 = 1200px (Landscape tablets ) */
+
+
+/* --------------------------------- */
+
+@media (max-width: 75em) {
+    html {
+        /* 9px / 16 = 0,5625 * 100 = 56.25%*/
+        font-size: 56.25%;
+    }
+    .grid {
+        row-gap: 6.4rem;
+        column-gap: 3.2rem;
+    }
+    .secondary-heading {
+        margin-bottom: 6.4rem;
+    }
+    .hero {
+        gap: 4.8rem;
+    }
+    .testimonials {
+        padding: 4.8rem;
+    }
+}
+
+
+/* DISPLAY BELOW 900px */
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 53.12%;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 6.4rem;
+    }
+    .hero-image-box {
+        text-align: center;
+    }
+    .hero-image {
+        width: 65%;
+    }
+    .delivered-meals {
+        justify-content: center;
+    }
+    .hero-text-box {
+        padding: 8rem 8rem 0 8rem;
+        text-align: center;
+    }
+    .logos img {
+        height: 2.6rem;
+    }
+    .step-number {
+        font-size: 7.4rem;
+    }
+    .section-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .cta-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+    .mobile-nav-button {
+        display: block;
+        z-index: 1000;
+    }
+    .header-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.952);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        position: fixed;
+        pointer-events: none;
+        transform: translateX(-5000px);
+    }
+    .header-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+    .header-nav-list-item .main-nav-link {
+        font-size: 3rem;
+        color: var(--grey-dark-color);
+        font-weight: 700;
+    }
+    .header-nav.nav--open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+        z-index: 10;
+    }
+    .nav--open .close-outline {
+        display: block;
+    }
+    .nav--open .menu-outline {
+        display: none;
+    }
+    .pricing-plan {
+        width: 90%;
+    }
+}
+
+
+/* DISPLAY BELOW 704px */
+
+@media (max-width: 44em) {
+    html {
+        font-size: 51%;
+    }
+    .grid--3cols,
+    .grid--4cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .list-of-diets-wrap {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+    .secondary-heading {
+        font-size: 3rem;
+    }
+    .ternitinary-heading {
+        font-size: 2.4rem;
+    }
+    .step-description {
+        line-height: 1.4;
+    }
+    .section-how,
+    .section-meals,
+    .section-pricing,
+    .section-cta {
+        padding: 8rem 3.2rem;
+    }
+    .pricing-plan {
+        width: 90%;
+        padding: 3.2rem;
+    }
+    .grid-footer {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 8rem;
+    }
+    .nav-col {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+    .footer-logo-div,
+    .address-col {
+        grid-column: span 3;
+    }
+    .logos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+    }
+}
+
+
+/* DISPLAY BELOW 580px */
+
+@media (max-width: 36.31em) {
+    .grid {
+        row-gap: 4.8rem;
+    }
+    .grid--2cols,
+    .grid--3cols,
+    .grid--4cols,
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+    .logos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+    }
+    .pricing-plan {
+        margin: 0 auto;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-text-box {
+        padding: 0;
+    }
+    .hero-image {
+        width: 70%;
+    }
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        padding: 12.8rem 3.2rem 0 3.2rem;
+    }
+    .cta-text-box .cta-text-box-text {
+        margin-bottom: 3.2rem;
+    }
+    .step-img-box:nth-child(2) {
+        grid-row: 1;
+    }
+    .step-img-box:nth-child(6) {
+        grid-row: 5;
+    }
+    .step-img-box {
+        transform: translateY(2.4rem);
+    }
+    .step-text-box {
+        text-align: center;
+    }
+    .cta-img-box {
+        height: 32rem;
+        grid-row: 1;
+    }
+    .meal {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .testimonials-container {
+        text-align: center;
+    }
+    .feature {
+        text-align: center;
+    }
+    /* .step-img:nth-child(3) {} */
+}
+
+@media (max-width: 21.43em) {
+    .section-how,
+    .section-meals,
+    .section-pricing,
+    .section-cta {
+        padding: 6.4rem 3.2rem;
+    }
+    .meal {
+        width: 90%;
+    }
+    .heading-primary {
+        font-size: 3.6rem;
+    }
+    .secondary-heading {
+        font-size: 2.4rem;
+        margin-bottom: 4.8rem;
+    }
+    .container-main .cta-text-box {
+        padding: 4.8rem 3.2rem;
+    }
+    .footer {
+        padding: 8rem 3.2rem 0 3.2rem;
+    }
+    .btn {
+        margin-right: 0;
+    }
+    .btn--outline {
+        padding: 1.6rem 3.2rem;
+    }
+    .btn--full {
+        margin-bottom: .8rem;
+    }
+    .logo {
+        height: 2rem;
+    }
+}
