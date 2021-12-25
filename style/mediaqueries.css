@@ -1,6 +1,24 @@
 /* how calculate 1350 / 16 = 84.000000 rounded to 84 */
 
 
+/* how to calculte font size 10px / 16 * 100 */
+
+
+/* --------------------------------- */
+
+
+/* FOR FULLHD DISPLAYS */
+
+
+/* --------------------------------- */
+
+@media (max-width: 120em) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 /* --------------------------------- */
 
 
@@ -44,6 +62,9 @@
     }
     .testimonials {
         padding: 4.8rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
