@@ -28,3 +28,7 @@ const observer = new IntersectionObserver(function(entries) {
     threshold: 0
 })
 observer.observe(sectionHero)
+
+document.querySelector('.nav--cta').addEventListener('click', (event) => {
+    event.preventDefault();
+})
